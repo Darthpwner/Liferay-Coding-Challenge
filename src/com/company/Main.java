@@ -19,7 +19,11 @@ public class Main {
 
         String text[] = r.parseText(input);
         for(int i = 0; i < text.length; i++) {
-            System.out.println(text[i]);
+            //System.out.println(text[i]);
+
+            String line[] = r.parseLine(text[i]);
+
+
         }
 
         //r.addLineToReceipt(input);
