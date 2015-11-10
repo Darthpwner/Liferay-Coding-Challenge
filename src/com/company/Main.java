@@ -21,9 +21,14 @@ public class Main {
 
         String print[] = new String[text.length];
         for(int i = 0; i < text.length; i++) {
-            print[i] = text[i].replaceAll("\\bat\\b", ":");
+            print[i] = text[i].replaceAll("\\bat\\b", ":"); //Regex to find only exact match for "at"
+            r.addCost(r.getPrice(print[i]));
+
+            
             System.out.println(print[i]);
         }
+
+
 
 //        int x;
 //        for(int i = 0; i < text.length; i++) {

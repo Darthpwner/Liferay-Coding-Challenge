@@ -16,6 +16,14 @@ public class Receipt {
         m_receipt.add(line);    //Adds line to the next index of the vector
     }
 
+    void addTax(double tax) {
+        m_tax.add(tax);    //Adds tax to the next index of the vector
+    }
+
+    void addCost(double cost) {
+        m_cost.add(cost);    //Adds cost to next index of the vector
+    }
+
     void printReceipt() {
         for(int i = 0; i < m_receipt.size(); i++) {
             System.out.println();
