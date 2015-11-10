@@ -64,7 +64,9 @@ public class Receipt {
     }
 
     Boolean hasSalesTax(String text) {
-        return false;
+        String[] arr = parseLine(text);
+
+        if(searchForKeyword(arr, ))
     }
 
     //Parses for the string "imported" tax

@@ -1,9 +1,23 @@
 package com.company;
 
+import java.util.Vector;
+
 /**
  * Created by Darthpwner on 11/9/15.
  */
 public class Food {
+    Food() {
+        m_food.add(beef);
+        m_food.add(burger);
+        m_food.add(cheese);
+        m_food.add(chicken);
+        m_food.add(chocolate);
+        m_food.add(chocolates);
+        m_food.add(fish);
+        m_food.add(pizza);
+        m_food.add(pork);
+    }
+
     final String beef = "beef";
     final String burger = "burger";
     final String cheese = "cheese";
@@ -14,4 +28,5 @@ public class Food {
     final String pizza = "pizza";
     final String pork = "pork";
 
+    private Vector<String> m_food = new Vector<String>();
 }
