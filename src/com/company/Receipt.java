@@ -1,6 +1,9 @@
 package com.company;
 
 import java.util.*;
+import com.company.Book;
+import com.company.Food;
+import com.company.MedicalProduct;
 
 /**
  * Created by Darthpwner on 11/9/15.
