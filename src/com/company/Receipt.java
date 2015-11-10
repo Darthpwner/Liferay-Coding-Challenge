@@ -124,7 +124,7 @@ public class Receipt {
         }
 
         baseTax = salesTax + importTax;
-        return Math.round(baseTax * 100.0)/100.0;   //Gets two decimal places
+        return Math.round(baseTax * 10.0)/10.0;   //Gets two decimal places
     }
 
     double getIndividualPriceWithTax(double price, double tax) {
