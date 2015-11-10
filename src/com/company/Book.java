@@ -7,6 +7,7 @@ import java.util.Vector;
  */
 
 public class Book {
+    //Book list is too extensive to hardcode so many titles
     Book() {
         m_books.add(book);
     }

@@ -10,7 +10,7 @@ import com.company.MedicalProduct;
  */
 
 //Sales tax is applicable at a rate of 10% on all goods, except books, food, and medical products
-    //Import duy is applicable on all imported goods at a rate of 5%
+    //Import duty is applicable on all imported goods at a rate of 5%
     //n% -> (np/100 rounded up to nearest 0.05)
 public class Receipt {
     //Public
