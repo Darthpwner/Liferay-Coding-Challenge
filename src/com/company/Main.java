@@ -4,8 +4,6 @@ import com.company.Receipt;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        Receipt r = new Receipt();
         Main m = new Main();
 
         m.getOutput("1 book at 12.49\n1 music CD at 14.99\n1 chocolate bar at 0.85");

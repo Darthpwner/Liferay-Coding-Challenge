@@ -41,18 +41,21 @@ public class Receipt {
         return m_arr.length;
     }
 
+    //Parses each line in the receipt
     String[] parseText(String text) {
         String[] arr = text.split("\n");
 
         return arr;
     }
 
+    //Parses each word in a line
     String[] parseLine(String text) {
         String[] arr = text.split(" ");
 
         return arr;
     }
 
+    //Searches for a keyword
     Boolean searchForKeyword(String[] arr, String keyword) {
         for (int i = 0; i < arr.length; i++) {
             if(arr[i].equals(keyword)) {
@@ -63,6 +66,7 @@ public class Receipt {
         return false;
     }
 
+    //Checks if the item does NOT have sales tax
     Boolean doesNotHaveSalesTax(String text) {
         String[] arr = parseLine(text);
 
@@ -112,6 +116,7 @@ public class Receipt {
         return numItems * price;
     }
 
+    //Gets total tax information based on the primitive natural language processing (hardcoding keywords)
     double getTax(String line, double price) {
         double baseTax = 0, salesTax = 0, importTax = 0;
 
