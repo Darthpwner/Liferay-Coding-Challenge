@@ -17,11 +17,12 @@ public class Main {
     void getOutput(String input) {
         Receipt r = new Receipt();
 
-        String text[] = r.parseText(input); //Has all the lines
+        //String text[] = r.parseText(input); //Has all the lines
+        r.addText(input);
 
-        String print[] = new String[text.length];
-        for(int i = 0; i < text.length; i++) {
-            print[i] = text[i].replaceAll("\\bat\\b", ":"); //Regex to find only exact match for "at"
+        String print[] = new String[r.getTextLength()];
+        for(int i = 0; i < r.getTextLength(); i++) {
+            print[i] = r.getText(i).replaceAll("\\bat\\b", ":"); //Regex to find only exact match for "at"
             //r.addCost(r.getPrice(print[i]));
 
             System.out.println(print[i]);

@@ -12,6 +12,7 @@ import java.util.*;
 public class Receipt {
     //Public
 
+    //Setters
     void addLineToReceipt(String line) {
         m_receipt.add(line);    //Adds line to the next index of the vector
     }
@@ -22,6 +23,19 @@ public class Receipt {
 
     void addCost(double cost) {
         m_cost.add(cost);    //Adds cost to next index of the vector
+    }
+
+    void addText(String input) {
+        m_arr = parseText(input);
+    }
+
+    //Getters
+    String getText(int i) {
+        return m_arr[i];
+    }
+
+    int getTextLength() {
+        return m_arr.length;
     }
 
     void printReceipt() {
@@ -116,4 +130,5 @@ public class Receipt {
     private Vector<String> m_receipt;
     private Vector<Double> m_tax;
     private Vector<Double> m_cost;
+    private String[] m_arr;
 }
