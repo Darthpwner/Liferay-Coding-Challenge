@@ -58,7 +58,7 @@ public class Food {
     int getFoodVectorSize() {
         return m_food.size();
     }
-    
+
     final String artichoke = "artichoke";
     final String aragula = "aragula";
     final String asparagus = "asparagus";
