@@ -30,8 +30,11 @@ public class Main {
             r.addTax(r.getTax(r.getText(i), r.getPrice(print[i])));
 
             double totalIndividualPrice = r.getPrice(print[i]) + r.getTax(r.getText(i), r.getPrice(print[i]));
+            String totalIndividualPriceString = String.valueOf(totalIndividualPrice);
+            //print[i] = r.getText(i).replaceAll(print[print.length-1], totalIndividualPriceString);
 
             System.out.println(print[i]);
+            System.out.println(totalIndividualPrice);
         }
 
         System.out.println("Sales Taxes : " + r.getTotalTax());
