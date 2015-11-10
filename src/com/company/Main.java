@@ -31,6 +31,7 @@ public class Main {
             r.addTax(r.getTax(r.getText(i), r.getPrice(print[i])));
 
             double totalIndividualPrice = r.getPrice(print[i]) + r.getTax(r.getText(i), r.getPrice(print[i]));
+            totalIndividualPrice = Math.round(totalIndividualPrice * 100.0)/100.0;
             String totalIndividualPriceString = String.valueOf(totalIndividualPrice);
             print[i] = r.getText(i).replaceAll(originalCost[originalCost.length-1], totalIndividualPriceString);
 
