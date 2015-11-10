@@ -66,7 +66,29 @@ public class Receipt {
     Boolean hasSalesTax(String text) {
         String[] arr = parseLine(text);
 
-        if(searchForKeyword(arr, ))
+        Book b = new Book();
+        Food f = new Food();
+        MedicalProduct mp = new MedicalProduct();
+
+        for(int i = 0; i < b.getBookVectorSize(); i++) {
+            if(searchForKeyword(arr, b.getBook(i))) {
+                return true;
+            }
+        }
+
+        for(int i = 0; i < f.getFoodVectorSize(); i++) {
+            if(searchForKeyword(arr, f.getFood(i))) {
+                return true;
+            }
+        }
+
+        for(int i = 0; i < mp.getMedicalProductVectorSize(); i++) {
+            if(searchForKeyword(arr, mp.getMedicalProduct(i))) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     //Parses for the string "imported" tax
@@ -112,7 +134,7 @@ public class Receipt {
             totalTax += tax;
         }
 
-        return totalTax;
+        return Math.round(totalTax * 100.0)/100.0;  //Gets two decimal places
     }
 
     //Gets total cost

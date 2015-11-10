@@ -14,6 +14,14 @@ public class MedicalProduct {
         m_medicalProduct.add(syrup);
     }
 
+    String getMedicalProduct(int i) {
+        return m_medicalProduct.get(i);
+    }
+
+    int getMedicalProductVectorSize() {
+        return m_medicalProduct.size();
+    }
+
     final String bandages = "bandages";
     final String cough = "cough";
     final String pills = "pills";

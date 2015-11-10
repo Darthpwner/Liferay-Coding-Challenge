@@ -18,6 +18,14 @@ public class Food {
         m_food.add(pork);
     }
 
+    String getFood(int i) {
+        return m_food.get(i);
+    }
+
+    int getFoodVectorSize() {
+        return m_food.size();
+    }
+
     final String beef = "beef";
     final String burger = "burger";
     final String cheese = "cheese";

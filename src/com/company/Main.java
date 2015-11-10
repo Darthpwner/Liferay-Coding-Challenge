@@ -34,6 +34,7 @@ public class Main {
 
         System.out.println("Sales Taxes : " + r.getTotalTax());
         double total = r.getTotalCost() + r.getTotalTax();
+        total = Math.round(total * 100.0)/ 100.0;   //Rounds to two decimal places
         System.out.println("Total : " + total);
 
         System.out.println("");
