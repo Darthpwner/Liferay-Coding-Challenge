@@ -25,7 +25,7 @@ public class Main {
         for(int i = 0; i < r.getTextLength(); i++) {
             print[i] = r.getText(i).replaceAll("\\bat\\b", ":"); //Regex to find only exact match for "at"
             r.addCost(r.getPrice(print[i]));
-            r.addTax(r.getTax(r.getText(i), r.getPrice(print[i])));    
+            r.addTax(r.getTax(r.getText(i), r.getPrice(print[i])));
 
             System.out.println(print[i]);
         }
@@ -34,15 +34,6 @@ public class Main {
         System.out.println("Total : " + r.getTotalCost());
 
         System.out.println("");
-
-//        int x;
-//        for(int i = 0; i < text.length; i++) {
-//            //System.out.println(text[i]);
-//
-//            double x = r.getPrice(text[i]);
-//        }
-
-        //r.addLineToReceipt(input);
     }
 
 }

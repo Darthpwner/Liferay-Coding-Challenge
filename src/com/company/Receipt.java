@@ -97,7 +97,7 @@ public class Receipt {
         }
 
         baseTax = salesTax + importTax;
-        return baseTax;
+        return Math.round(baseTax * 100.0)/100.0;   //Gets two decimal places
     }
 
     //Gets total tax
