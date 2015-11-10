@@ -11,7 +11,7 @@ public class Main {
 //                "Hello there"));
         Main m = new Main();
 
-        m.getOutput("1 book at 12.49\n1 music CD at 14.99\n1 chocolate bar at 0.85");
+        m.getOutput("2 book at 12.49\n1 music CD at 14.99\n1 chocolate bar at 0.85");
         m.getOutput("1 imported book at 12.49\n1 music CD at 14.99\n1 chocolate bar at 0.85");
         m.getOutput("1 imported box of chocolates at 10.00\n1 imported bottle of perfume at 47.50");
         m.getOutput("1 imported bottle of perfume at 27.99\n1 bottle of perfume at 18.99\n1 packet of headache pills at 9.75\n1 imported box of chocolates at 11.25");

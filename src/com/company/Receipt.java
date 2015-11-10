@@ -106,13 +106,15 @@ public class Receipt {
     double getPrice(String text) {
         String[] arr = parseLine(text);
 
+        double numItems = Double.parseDouble(arr[0]);
         double price = Double.parseDouble(arr[arr.length-1]);
 
-        return price;
+        return numItems * price;
     }
 
     double getTax(String line, double price) {
         double baseTax = 0, salesTax = 0, importTax = 0;
+
         //If good is a book, food, or medical product
         if(!doesNotHaveSalesTax(line)) {
             salesTax = price * 0.10;
