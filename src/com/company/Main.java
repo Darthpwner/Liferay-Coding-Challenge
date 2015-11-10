@@ -12,6 +12,7 @@ public class Main {
         Main m = new Main();
 
         m.getOutput("1 book at 12.49\n1 music CD at 14.99\n1 chocolate bar at 0.85");
+        m.getOutput("1 imported book at 12.49\n1 music CD at 14.99\n1 chocolate bar at 0.85");
     }
 
     void getOutput(String input) {
@@ -28,10 +29,10 @@ public class Main {
             System.out.println(print[i]);
         }
 
-        //System.out.println("Sales Taxes : " + r.getTotalCost());
+        System.out.println("Sales Taxes : " + r.getTotalTax());
         System.out.println("Total : " + r.getTotalCost());
 
-
+        System.out.println("");
 
 //        int x;
 //        for(int i = 0; i < text.length; i++) {
