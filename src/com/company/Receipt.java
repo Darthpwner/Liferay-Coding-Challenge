@@ -128,7 +128,7 @@ public class Receipt {
             total += price;
         }
 
-        return total;
+        return Math.round(total * 100.0)/ 100.0; //Gets two decimal places
     }
 
     //Private
