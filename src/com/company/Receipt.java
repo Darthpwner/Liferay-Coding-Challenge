@@ -63,7 +63,7 @@ public class Receipt {
         return false;
     }
 
-    Boolean hasSalesTax(String text) {
+    Boolean doesNotHaveSalesTax(String text) {
         String[] arr = parseLine(text);
 
         Book b = new Book();
@@ -114,7 +114,7 @@ public class Receipt {
     double getTax(String line, double price) {
         double baseTax = 0, salesTax = 0, importTax = 0;
         //If good is a book, food, or medical product
-        if(hasSalesTax(line)) {
+        if(!doesNotHaveSalesTax(line)) {
             salesTax = price * 0.10;
         }
 
