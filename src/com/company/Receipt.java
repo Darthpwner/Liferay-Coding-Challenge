@@ -23,7 +23,19 @@ public class Receipt {
     }
 
     String[] parseText(String text) {
+        String[] arr = text.split(" ");
 
+        return arr;
+    }
+
+    Boolean searchForKeyword(String[] arr, String keyword) {
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i].equals(keyword)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     Boolean hasSalesTax(String text) {
@@ -33,14 +45,10 @@ public class Receipt {
 
     //Parses for the string "imported" tax
     Boolean hasImportTax(String text) {
-        String[] arr = text.split(" ");
+        String[] arr = parseText(text);
 
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
-
-            if(arr[i].equals("imported")) {
-                return true;
-            }
+        if(searchForKeyword(arr, "imported")) {
+            return true;
         }
 
         return false;
