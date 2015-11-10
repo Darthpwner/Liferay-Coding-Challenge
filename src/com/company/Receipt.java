@@ -12,16 +12,11 @@ import java.util.*;
 public class Receipt {
     //Public
     Receipt() {
-        m_receipt = new Vector<>();
         m_cost = new Vector<>();
         m_tax = new Vector<>();
     }
 
     //Setters
-    void addLineToReceipt(String line) {
-        m_receipt.add(line);    //Adds line to the next index of the vector
-    }
-
     void addTax(double tax) {
         m_tax.add(tax);    //Adds tax to the next index of the vector
     }
@@ -41,12 +36,6 @@ public class Receipt {
 
     int getTextLength() {
         return m_arr.length;
-    }
-
-    void printReceipt() {
-        for(int i = 0; i < m_receipt.size(); i++) {
-            System.out.println();
-        }
     }
 
     String[] parseText(String text) {
@@ -132,7 +121,6 @@ public class Receipt {
     }
 
     //Private
-    private Vector<String> m_receipt;
     private Vector<Double> m_tax;
     private Vector<Double> m_cost;
     private String[] m_arr;
