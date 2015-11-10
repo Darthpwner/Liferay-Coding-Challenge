@@ -129,10 +129,6 @@ public class Receipt {
         return Math.round(baseTax * 10.0)/10.0;   //Gets two decimal places
     }
 
-    double getIndividualPriceWithTax(double price, double tax) {
-        return price + tax;
-    }
-
     //Gets total tax
     double getTotalTax() {
         double totalTax = 0;
