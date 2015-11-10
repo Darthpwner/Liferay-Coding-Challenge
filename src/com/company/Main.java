@@ -23,12 +23,13 @@ public class Main {
         String print[] = new String[r.getTextLength()];
         for(int i = 0; i < r.getTextLength(); i++) {
             print[i] = r.getText(i).replaceAll("\\bat\\b", ":"); //Regex to find only exact match for "at"
-            //r.addCost(r.getPrice(print[i]));
+            r.addCost(19.98);
+            r.addCost(r.getPrice(print[i]));
 
             System.out.println(print[i]);
         }
 
-        System.out.println("Sales Taxes : ");
+        //System.out.println("Sales Taxes : " + r.getTotalCost());
         System.out.println("Total : ");
 
 

@@ -11,6 +11,11 @@ import java.util.*;
     //n% -> (np/100 rounded up to nearest 0.05)
 public class Receipt {
     //Public
+    Receipt() {
+        m_receipt = new Vector<>();
+        m_cost = new Vector<>();
+        m_tax = new Vector<>();
+    }
 
     //Setters
     void addLineToReceipt(String line) {
