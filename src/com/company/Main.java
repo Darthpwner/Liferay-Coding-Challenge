@@ -6,10 +6,14 @@ public class Main {
     public static void main(String[] args) {
         Main m = new Main();
 
+        //Input must be hardcoded and separated by the newline char (\n)
+
+        //Test cases
         m.getOutput("1 book at 12.49\n1 music CD at 14.99\n1 chocolate bar at 0.85");
         m.getOutput("1 imported book at 12.49\n1 music CD at 14.99\n1 chocolate bar at 0.85");
         m.getOutput("1 imported box of chocolates at 10.00\n1 imported bottle of perfume at 47.50");
-        m.getOutput("1 imported bottle of perfume at 27.99\n1 bottle of perfume at 18.99\n1 packet of headache pills at 9.75\n1 imported box of chocolates at 11.25");
+        m.getOutput("2 imported bottle of whiskey at 49.99\n3 Xbox 360 at 199.99\n1 packet of headache pills at 9.75\n1 iPhone 6S at 999.99");
+        m.getOutput("5 imported bottle of water at 9.99\n1 tennis racket at 149.99\n1 Physics textbook at 199.99");
     }
 
     String padZeros(String amount) {
