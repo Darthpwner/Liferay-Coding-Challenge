@@ -25,6 +25,7 @@ public class Main {
         for(int i = 0; i < r.getTextLength(); i++) {
             print[i] = r.getText(i).replaceAll("\\bat\\b", ":"); //Regex to find only exact match for "at"
             r.addCost(r.getPrice(print[i]));
+            r.addTax(r.getTax(r.getText(i), i));    //Fix this shit
 
             System.out.println(print[i]);
         }
