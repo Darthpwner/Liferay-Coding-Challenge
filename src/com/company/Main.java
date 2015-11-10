@@ -31,7 +31,8 @@ public class Main {
         }
 
         System.out.println("Sales Taxes : " + r.getTotalTax());
-        System.out.println("Total : " + r.getTotalCost());
+        double total = r.getTotalCost() + r.getTotalTax();
+        System.out.println("Total : " + total);
 
         System.out.println("");
     }
