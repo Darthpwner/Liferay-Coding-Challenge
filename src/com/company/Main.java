@@ -17,14 +17,20 @@ public class Main {
     void getOutput(String input) {
         Receipt r = new Receipt();
 
-        String text[] = r.parseText(input);
+        String text[] = r.parseText(input); //Has all the lines
+
+        String print[] = new String[text.length];
         for(int i = 0; i < text.length; i++) {
-            //System.out.println(text[i]);
-
-            String line[] = r.parseLine(text[i]);
-
-
+            print[i] = text[i].replaceAll("\\bat\\b", ":");
+            System.out.println(print[i]);
         }
+
+//        int x;
+//        for(int i = 0; i < text.length; i++) {
+//            //System.out.println(text[i]);
+//
+//            double x = r.getPrice(text[i]);
+//        }
 
         //r.addLineToReceipt(input);
     }
