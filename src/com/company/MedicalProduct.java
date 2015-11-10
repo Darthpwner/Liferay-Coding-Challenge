@@ -5,6 +5,7 @@ import java.util.Vector;
 /**
  * Created by Darthpwner on 11/9/15.
  */
+
 public class MedicalProduct {
     MedicalProduct() {
         m_medicalProduct.add(bandages);
