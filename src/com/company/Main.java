@@ -29,6 +29,8 @@ public class Main {
             r.addCost(r.getPrice(print[i]));
             r.addTax(r.getTax(r.getText(i), r.getPrice(print[i])));
 
+            double totalIndividualPrice = r.getPrice(print[i]) + r.getTax(r.getText(i), r.getPrice(print[i]));
+
             System.out.println(print[i]);
         }
 
