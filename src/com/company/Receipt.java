@@ -1,4 +1,5 @@
 package com.company;
+
 import java.util.*;
 
 /**
@@ -10,7 +11,6 @@ import java.util.*;
     //n% -> (np/100 rounded up to nearest 0.05)
 public class Receipt {
     //Public
-//    Receipt() {}
 
     void addLineToReceipt(String line) {
         m_receipt.add(line);    //Adds line to the next index of the vector
@@ -54,6 +54,15 @@ public class Receipt {
         return false;
     }
 
+    //Gets price from each line
+    double getPrice(String text) {
+        String[] arr = parseText(text);
+
+        double price = Double.parseDouble(arr[arr.length-1]);
+
+        return price;
+    }
+
     double getTax(String line, double price) {
         double baseTax = 0, salesTax = 0, importTax = 0;
         //If good is a book, food, or medical product
@@ -70,6 +79,19 @@ public class Receipt {
         return baseTax;
     }
 
+    //Gets total cost
+    double getTotal() {
+        double total = 0;
+        for (double price : m_cost) {
+            total += price;
+        }
+
+        return total;
+    }
+
+    
+
     //Private
     private Vector<String> m_receipt;
+    private Vector<Double> m_cost;
 }

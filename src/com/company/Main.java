@@ -7,5 +7,6 @@ public class Main {
 	// write your code here
         Receipt r = new Receipt();
         System.out.println(r.hasImportTax("imported hello"));
+        System.out.println(r.getPrice("Fuck boy 19.81"));
     }
 }
