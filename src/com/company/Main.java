@@ -20,21 +20,21 @@ public class Main {
     void getOutput(String input) {
         Receipt r = new Receipt();
 
-        //String text[] = r.parseText(input); //Has all the lines
         r.addText(input);
 
         String print[] = new String[r.getTextLength()];
         for(int i = 0; i < r.getTextLength(); i++) {
             print[i] = r.getText(i).replaceAll("\\bat\\b", ":"); //Regex to find only exact match for "at"
+            String originalCost[] = r.parseLine(print[i]);
+
             r.addCost(r.getPrice(print[i]));
             r.addTax(r.getTax(r.getText(i), r.getPrice(print[i])));
 
             double totalIndividualPrice = r.getPrice(print[i]) + r.getTax(r.getText(i), r.getPrice(print[i]));
             String totalIndividualPriceString = String.valueOf(totalIndividualPrice);
-            //print[i] = r.getText(i).replaceAll(print[print.length-1], totalIndividualPriceString);
+            print[i] = r.getText(i).replaceAll(originalCost[originalCost.length-1], totalIndividualPriceString);
 
             System.out.println(print[i]);
-            System.out.println(totalIndividualPrice);
         }
 
         System.out.println("Sales Taxes : " + r.getTotalTax());
