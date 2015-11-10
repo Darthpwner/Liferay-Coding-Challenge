@@ -9,4 +9,11 @@ public class Main {
         System.out.println(r.hasImportTax("imported hello"));
         System.out.println(r.getPrice("Fuck boy 19.81"));
     }
+
+    void getOutput(String input) {
+        Receipt r = new Receipt();
+
+        r.addLineToReceipt(input);
+    }
+
 }

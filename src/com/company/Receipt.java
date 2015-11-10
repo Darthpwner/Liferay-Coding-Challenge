@@ -23,6 +23,12 @@ public class Receipt {
     }
 
     String[] parseText(String text) {
+        String[] arr = text.split("\n");
+
+        return arr;
+    }
+
+    String[] parseLine(String text) {
         String[] arr = text.split(" ");
 
         return arr;
@@ -39,13 +45,12 @@ public class Receipt {
     }
 
     Boolean hasSalesTax(String text) {
-
         return false;
     }
 
     //Parses for the string "imported" tax
     Boolean hasImportTax(String text) {
-        String[] arr = parseText(text);
+        String[] arr = parseLine(text);
 
         if(searchForKeyword(arr, "imported")) {
             return true;
@@ -56,7 +61,7 @@ public class Receipt {
 
     //Gets price from each line
     double getPrice(String text) {
-        String[] arr = parseText(text);
+        String[] arr = parseLine(text);
 
         double price = Double.parseDouble(arr[arr.length-1]);
 
@@ -79,8 +84,18 @@ public class Receipt {
         return baseTax;
     }
 
+    //Gets total tax
+    double getTotalTax() {
+        double totalTax = 0;
+        for(double tax: m_tax) {
+            totalTax += tax;
+        }
+
+        return totalTax;
+    }
+
     //Gets total cost
-    double getTotal() {
+    double getTotalCost() {
         double total = 0;
         for (double price : m_cost) {
             total += price;
@@ -89,9 +104,8 @@ public class Receipt {
         return total;
     }
 
-    
-
     //Private
     private Vector<String> m_receipt;
+    private Vector<Double> m_tax;
     private Vector<Double> m_cost;
 }
